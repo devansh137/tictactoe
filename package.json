@@ -21,7 +21,7 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.10",
+    "@babel/core": "^7.14.6",
     "babel-eslint": "^10.1.0",
     "babel-preset-nano-react-app": "^0.1.0",
     "eslint": "^7.30.0",
@@ -38,26 +38,21 @@
     "presets": [
       "nano-react-app"
     ],
-    "babel": {
-      "presets": [
-        "nano-react-app"
+    "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": true
+        },
+        "yt1"
       ],
-      "plugins": [
-        [
-          "@babel/plugin-proposal-class-properties",
-          {
-            "loose": true
-          },
-          "yt1"
-        ],
-        [
-          "@babel/plugin-proposal-private-methods",
-          {
-            "loose": true
-          },
-          "yt2"
-        ]
+      [
+        "@babel/plugin-proposal-private-methods",
+        {
+          "loose": true
+        },
+        "yt2"
       ]
-    }
+    ]
   }
 }
